@@ -1,38 +1,41 @@
-import { defineConfigWithTheme } from 'vitepress'
-import type { ThemeConfig } from 'vitepress-carbon'
-import baseConfig from 'vitepress-carbon/config'
+import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
-export default defineConfigWithTheme<ThemeConfig>({
-  extends: baseConfig,
-  title: "My Awesome Project",
-  description: "A VitePress Site",
-  srcDir: 'src',
-  //base: '/vitepress-carbon-template/', if running on github-pages, set repository name here
-
+export default defineConfig({
+  title: "Матрешка 52",
+  description: "Форум мини-проекта",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    search: {
-      provider: 'local'
-    },
-    
+    // Настройка бокового меню
     sidebar: [
       {
-        text: 'Examples',
+        text: '📜 Правила',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Правила сервера', link: '/rules/server-rules' },
+        ]
+      },
+      {
+        text: '🏢 Фракции',
+        items: [
+          { text: 'Правительство', link: '/fraction/pravo' },
+        ]
+      },
+      {
+        text: '📁 Отчеты',
+        items: [
+          { text: 'Проверка отчетов', link: '/reports/test' },
         ]
       }
     ],
 
+    // Кнопки в верхнем меню
+    nav: [
+      { text: 'Главная', link: '/' },
+      { text: 'Правила', link: '/rules/server-rules' }
+    ],
+
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/brenoepics/vitepress-carbon' }
+      { icon: 'discord', link: 'https://discord.gg/your-link' } // Замени на свой Дискорд
     ]
-  }
+  },
+  // Включаем темную тему по умолчанию
+  appearance: 'dark'
 })
