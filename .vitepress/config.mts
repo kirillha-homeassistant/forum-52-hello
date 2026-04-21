@@ -42,10 +42,12 @@ export default defineConfig({
         ]
       },
       {
-        text: '📁 Работа с отчетами',
-        collapsed: true,
+        text: '📁 Система отчётов',
+        collapsed: false,
         items: [
-          { text: 'Тестовый раздел', link: '/reports/test' },
+          { text: 'Подать жалобу', link: '/reports/complaints' },
+          { text: 'Отчёты на повышение', link: '/reports/up' },
+          { text: 'Заявления на перевод', link: '/reports/transfer' },
         ]
       }
     ],
