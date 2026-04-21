@@ -1,36 +1,32 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  // Твой путь к сайту
+  base: '/forum-52-hello/', 
+  
   title: "Матрёшка 52",
-  description: "Официальный форум 52 сервера",
+  description: "Официальный форум сервера",
   lang: 'ru-RU',
+
   themeConfig: {
-    // Логотип и поиск
-    search: {
-      provider: 'local'
-    },
-    
-    // Навигация сверху
+    // Верхнее меню
     nav: [
       { text: 'Главная', link: '/' },
       { text: 'Правила', link: '/rules/server-rules' },
-      { text: 'Связь', link: 'https://discord.gg/your-link' }
     ],
 
-    // Боковое меню (Sidebar) настроено под твои скриншоты
+    // Боковое меню со всеми твоими папками
     sidebar: [
       {
         text: '📜 Основная информация',
-        collapsed: false,
         items: [
           { text: 'Правила сервера', link: '/rules/server-rules' },
           { text: 'Общие правила', link: '/rules/server' },
-          { text: 'Правила лидеров', link: '/rules/leaders' },
+          { text: 'Правила лидеров', link: '/rules/leaders' }
         ]
       },
       {
         text: '🏢 Государственные организации',
-        collapsed: false,
         items: [
           { text: 'Правительство', link: '/fraction/pravo' },
           { text: 'ФСБ', link: '/fraction/fsb' },
@@ -38,16 +34,13 @@ export default defineConfig({
           { text: 'Армия России', link: '/fraction/army' },
           { text: 'МЧС', link: '/fraction/mchs' },
           { text: 'Городская Больница', link: '/fraction/gb' },
-          { text: 'ГТРК Temp', link: '/fraction/gtrk' },
+          { text: 'ГТРК Temp', link: '/fraction/gtrk' }
         ]
       },
       {
         text: '📁 Система отчётов',
-        collapsed: false,
         items: [
-          { text: 'Подать жалобу', link: '/reports/complaints' },
-          { text: 'Отчёты на повышение', link: '/reports/up' },
-          { text: 'Заявления на перевод', link: '/reports/transfer' },
+          { text: 'Жалобы / Отчеты', link: '/reports/test' }
         ]
       }
     ],
@@ -56,16 +49,13 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.gg/your-link' }
     ],
 
-    outline: {
-      label: 'На этой странице'
-    },
-    
+    // Текст на кнопках внизу страниц
     docFooter: {
       prev: 'Назад',
       next: 'Вперед'
     }
   },
-  
-  // Принудительная темная тема
+
+  // Темная тема
   appearance: 'dark'
 })
