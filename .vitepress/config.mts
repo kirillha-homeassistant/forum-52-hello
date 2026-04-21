@@ -1,41 +1,69 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Матрешка 52",
-  description: "Форум мини-проекта",
+  title: "Матрёшка 52",
+  description: "Официальный форум 52 сервера",
+  lang: 'ru-RU',
   themeConfig: {
-    // Настройка бокового меню
+    // Логотип и поиск
+    search: {
+      provider: 'local'
+    },
+    
+    // Навигация сверху
+    nav: [
+      { text: 'Главная', link: '/' },
+      { text: 'Правила', link: '/rules/server-rules' },
+      { text: 'Связь', link: 'https://discord.gg/your-link' }
+    ],
+
+    // Боковое меню (Sidebar) настроено под твои скриншоты
     sidebar: [
       {
-        text: '📜 Правила',
+        text: '📜 Основная информация',
+        collapsed: false,
         items: [
           { text: 'Правила сервера', link: '/rules/server-rules' },
+          { text: 'Общие правила', link: '/rules/server' },
+          { text: 'Правила лидеров', link: '/rules/leaders' },
         ]
       },
       {
-        text: '🏢 Фракции',
+        text: '🏢 Государственные организации',
+        collapsed: false,
         items: [
           { text: 'Правительство', link: '/fraction/pravo' },
+          { text: 'ФСБ', link: '/fraction/fsb' },
+          { text: 'МВД', link: '/fraction/mvd' },
+          { text: 'Армия России', link: '/fraction/army' },
+          { text: 'МЧС', link: '/fraction/mchs' },
+          { text: 'Городская Больница', link: '/fraction/gb' },
+          { text: 'ГТРК Temp', link: '/fraction/gtrk' },
         ]
       },
       {
-        text: '📁 Отчеты',
+        text: '📁 Работа с отчетами',
+        collapsed: true,
         items: [
-          { text: 'Проверка отчетов', link: '/reports/test' },
+          { text: 'Тестовый раздел', link: '/reports/test' },
         ]
       }
     ],
 
-    // Кнопки в верхнем меню
-    nav: [
-      { text: 'Главная', link: '/' },
-      { text: 'Правила', link: '/rules/server-rules' }
+    socialLinks: [
+      { icon: 'discord', link: 'https://discord.gg/your-link' }
     ],
 
-    socialLinks: [
-      { icon: 'discord', link: 'https://discord.gg/your-link' } // Замени на свой Дискорд
-    ]
+    outline: {
+      label: 'На этой странице'
+    },
+    
+    docFooter: {
+      prev: 'Назад',
+      next: 'Вперед'
+    }
   },
-  // Включаем темную тему по умолчанию
+  
+  // Принудительная темная тема
   appearance: 'dark'
 })
