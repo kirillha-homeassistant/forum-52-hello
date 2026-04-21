@@ -1,29 +1,26 @@
 ---
-# https://brenoepics.github.io/vitepress-carbon/guide/home-component.html
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
-  icon: 🛠️
+  name: "Матрёшка 52"
+  text: "Официальный форум сервера"
+  tagline: "Твой путь в криминальном мире начинается здесь"
   image:
-    src: ./bg.svg
-    alt: Banner
+    src: https://i.imgur.com/your-logo.png # Можешь вставить ссылку на логотип Матрешки
+    alt: Matreshka 52
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Читать правила
+      link: /rules/server-rules
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Перейти к фракциям
+      link: /fraction/pravo
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: "52 Сервер"
+    details: "Стабильная работа, адекватная администрация и уникальный геймплей."
+  - title: "Активные фракции"
+    details: "Вступай в МВД, ФСБ или ГТРК 'Temp' и наводи свои порядки."
+  - title: "Система отчётов"
+    details: "Быстрая проверка жалоб и заявлений на повышение прямо здесь."
 ---
-
